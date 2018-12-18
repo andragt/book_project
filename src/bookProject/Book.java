@@ -2,9 +2,9 @@ package bookProject;
 
 import java.util.ArrayList;
 
-public class Book {
+public class Book implements Element{
 	private String title;
-	private ArrayList<Chapter> content = new ArrayList<Chapter>();
+	private ArrayList<Element> content = new ArrayList<Element>();
 	private ArrayList<Author> authors = new ArrayList<Author>();
 
 	public Book(String title) {
@@ -16,28 +16,31 @@ public class Book {
 		for(Author ath : authors) {
 			ath.print();
 		}
-		for(Chapter chp : content) {
+		for(Element chp : content) {
 			chp.print();
 		}
 
 	}
-	
-	public int createChapter(String name) {
-		Chapter chp = new Chapter(name);
-		content.add(chp);
-		return content.indexOf(chp);
-	}
-
-	public Chapter getChapter(int indexChapterOne) {
-		// TODO Auto-generated method stub
-		//check index is in range
-		return content.get(indexChapterOne);
-	}
 
 	public void addAuthor(Author rpGheo) {
-		// TODO Auto-generated method stub
 		authors.add(rpGheo);
 		
+	}
+
+	@Override
+	public void add(Element elm) {
+		content.add(elm);
+		
+	}
+
+	@Override
+	public void remove(Element elm) {
+		
+	}
+
+	@Override
+	public Element getChild(int index) {
+		return null;
 	}
 	
 

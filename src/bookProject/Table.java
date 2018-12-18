@@ -1,6 +1,6 @@
 package bookProject;
 
-public class Table {
+public class Table implements Element{
 	private String title;
 
 	public Table(String title) {

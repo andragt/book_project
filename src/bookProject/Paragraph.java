@@ -1,6 +1,6 @@
 package bookProject;
 
-public class Paragraph {
+public class Paragraph implements Element{
 	private String text;
 
 	public Paragraph(String text) {
